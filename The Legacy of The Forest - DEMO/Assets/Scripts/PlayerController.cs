@@ -1,10 +1,14 @@
 using UnityEngine.EventSystems;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
     public Interactable focus;
-    public int Gold;
+    public int experience = 0;
+    public int gold = 0;
+
+    public List<Quest> quests = new List<Quest>();
     Camera cam;
     // Start is called before the first frame update
     void Start()

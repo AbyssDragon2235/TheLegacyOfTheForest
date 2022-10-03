@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerInteraction : MonoBehaviour
 {
+    public Quest quest;
+    public PlayerController player;
     public GameObject currentInterObject = null;
 
     void Update()
@@ -37,6 +39,17 @@ public class PlayerInteraction : MonoBehaviour
             Debug.Log("pickable item");
             //pick it up
             currentInterObject.SendMessage("DoInteraction");
+            
+            if (quest.isActive)
+            {
+                quest.goal.ItemCollected();
+                if (quest.goal.IsReached())
+                {
+                    player.experience += quest.experienceReward;
+                    player.gold += quest.goldReward;
+                    quest.Complete();
+                }
+            }
         }
     }
 
