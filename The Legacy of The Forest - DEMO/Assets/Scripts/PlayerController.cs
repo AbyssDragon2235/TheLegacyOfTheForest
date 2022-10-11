@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     public Interactable focus;
     public int experience = 0;
     public int gold = 0;
+    public float health = 100f;
 
     public List<Quest> quests = new List<Quest>();
     Camera cam;
