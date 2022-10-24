@@ -10,6 +10,11 @@ public class MusicController : MonoBehaviour
     {
         DontDestroyOnLoad(this.gameObject);
 
+        if (instance != null)
+        {
+            instance = this;
+        }
+        
         if (instance == null)
         {
             instance = this;
