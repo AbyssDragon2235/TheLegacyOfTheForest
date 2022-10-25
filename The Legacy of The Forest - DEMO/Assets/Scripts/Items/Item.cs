@@ -7,6 +7,11 @@ public class Item : ScriptableObject
     public Sprite icon = null;
     public bool isDefaultItem = false;
 
+    [SerializeField]
+    public int price;
+    [SerializeField]
+    public float processTime = 10f;
+
     public virtual void Use()
     {
         //use the item

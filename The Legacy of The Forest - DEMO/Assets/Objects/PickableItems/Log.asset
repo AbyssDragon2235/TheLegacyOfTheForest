@@ -15,3 +15,5 @@ MonoBehaviour:
   name: Basic Log
   icon: {fileID: 21300000, guid: b277abad359d11840afc7331734858d2, type: 3}
   isDefaultItem: 0
+  price: 50
+  processTime: 10

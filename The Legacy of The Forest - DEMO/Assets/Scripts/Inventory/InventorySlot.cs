@@ -5,8 +5,12 @@ public class InventorySlot : MonoBehaviour
 {
     public Image icon;
     public Button removeButton;
+    public PlayerController player;
+    private int goldSellableFor;
 
     Item item;
+
+
 
     public void AddItem (Item newItem)
     {
@@ -28,6 +32,10 @@ public class InventorySlot : MonoBehaviour
 
     public void OnRemoveButton()
     {
+        goldSellableFor = item.price;
+
+        player.gold = player.gold + goldSellableFor;
+
         Inventory.instance.Remove(item);
     }
 
