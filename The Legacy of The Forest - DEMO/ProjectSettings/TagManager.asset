@@ -6,6 +6,9 @@ TagManager:
   tags:
   - InteractableObject
   - PickableItem
+  - TheMainHouse
+  - TimeDisplay
+  - DayDisplay
   layers:
   - Default
   - TransparentFX

@@ -11,6 +11,27 @@ public class PlayerController : MonoBehaviour
 
     public List<Quest> quests = new List<Quest>();
     Camera cam;
+
+    public static PlayerController instance;
+
+    private void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+
+        if (instance != null)
+        {
+            instance = this;
+        }
+
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -20,21 +41,21 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (EventSystem.current.IsPointerOverGameObject())
-            return;
+        //if (EventSystem.current.IsPointerOverGameObject())
+        //    return;
 
-        if (Input.GetMouseButtonDown(0))
-        {
-            Ray ray = cam.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
+        //if (Input.GetMouseButtonDown(0))
+        //{
+        //    Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+        //    RaycastHit hit;
 
-            if (Physics.Raycast(ray, out hit))
-            {
-                Debug.Log("WE HIT" + hit.collider.name + " " + hit.point);
-                //move player to what we hit
-                //stop focusing
-            }
-        }
+        //    if (Physics.Raycast(ray, out hit))
+        //    {
+        //        Debug.Log("WE HIT" + hit.collider.name + " " + hit.point);
+        //        //move player to what we hit
+        //        //stop focusing
+        //    }
+        //}
 
         if (Input.GetMouseButtonDown(1))
         {

@@ -15,6 +15,17 @@ public class SceneSwitcher : MonoBehaviour
 
         animator.SetTrigger("FadeOut");
     }
+
+    public void OnTriggerEnter2D(Collider2D other)
+    {
+            if(other.CompareTag("Player") && !other.isTrigger)
+        {
+            sceneToLoad = SceneManager.GetActiveScene().buildIndex + 1;
+
+            animator.SetTrigger("FadeOut");
+        }
+    }
+
     public void OnFadeComplete()
     {
         SceneManager.LoadScene(sceneToLoad);
