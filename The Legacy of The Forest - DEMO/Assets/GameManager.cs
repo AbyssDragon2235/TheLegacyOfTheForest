@@ -12,4 +12,14 @@ public class GameManager : MonoBehaviour
     }
 
     public GameObject player;
+
+    public KeyCode screenShotButton;
+    void Update()
+    {
+        if (Input.GetKeyDown(screenShotButton))
+        {
+            ScreenCapture.CaptureScreenshot("screenshot.png", 2);
+            Debug.Log("A screenshot was taken!");
+        }
+    }
 }
