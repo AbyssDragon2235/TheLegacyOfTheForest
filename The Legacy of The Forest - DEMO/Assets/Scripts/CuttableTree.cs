@@ -7,6 +7,14 @@ public class CuttableTree : ToolHit
     [SerializeField] GameObject drop;
     [SerializeField] int dropCount = 10;
     [SerializeField] float spread = 2f;
+    [SerializeField] int healthToDeal;
+
+    PlayerController player;
+
+    private void Start()
+    {
+        player = FindObjectOfType<PlayerController>();
+    }
 
     public override void Hit()
     {
@@ -19,6 +27,8 @@ public class CuttableTree : ToolHit
             GameObject go = Instantiate(drop);
             go.transform.position = pos;
         }
+
+        player.health = player.health + healthToDeal;
 
         Destroy(gameObject);
     }

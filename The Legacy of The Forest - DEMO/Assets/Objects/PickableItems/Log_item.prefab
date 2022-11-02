@@ -11,11 +11,9 @@ GameObject:
   - component: {fileID: 5358602560396117630}
   - component: {fileID: -5010596613679477619}
   - component: {fileID: 1507505019}
-  - component: {fileID: 1507505017}
   - component: {fileID: 2652510215438910268}
   - component: {fileID: 1289813531}
   - component: {fileID: 1289813532}
-  - component: {fileID: 1289813535}
   - component: {fileID: 1289813540}
   m_Layer: 0
   m_Name: Log_item
@@ -68,19 +66,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.13
---- !u!114 &1507505017
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1067015948539605775}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6334f9f091705cc47bbef6efe98fe8e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: 8d19facae6565e5458ec439ddbb43284, type: 2}
 --- !u!114 &2652510215438910268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110,7 +95,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1
+  m_Radius: 0.13
 --- !u!212 &1289813532
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -163,19 +148,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1289813535
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1067015948539605775}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6334f9f091705cc47bbef6efe98fe8e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: 8d19facae6565e5458ec439ddbb43284, type: 2}
 --- !u!114 &1289813540
 MonoBehaviour:
   m_ObjectHideFlags: 0
